@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EmailSignup from '../../components/EmailSignup.astro';
+
+const amazonUrl = 'https://www.amazon.com/dp/B0GZ93ZSM4';
+---
+
+<BaseLayout
+  title="Thread of White · Book Three of The Pairing"
+  description="Lira is a prisoner, and her thread is older than the system that built her cell. Book Three of The Pairing by Caleb Arlow."
+  ogImage="/covers/thread-of-white.png"
+>
+  <section class="section" style="padding-top: var(--s-9);">
+    <div class="wrap">
+      <p style="margin-bottom: var(--s-5);">
+        <a class="btn-text" href="/books" style="color: var(--paper-300);">← All books</a>
+      </p>
+
+      <div class="book-detail">
+        <div class="book-cover">
+          <img src="/covers/thread-of-white.png" alt="Thread of White cover" />
+        </div>
+
+        <div>
+          <p class="t-eyebrow white">Book Three · Discovery arc · The Pairing</p>
+          <h1 class="book-detail-title">
+            Thread of <span class="em-italic" style="color: var(--thread-white-2);">White.</span>
+          </h1>
+          <div class="book-detail-meta">
+            <span>YA Fantasy</span><span class="dot">·</span>
+            <span>~199K words</span><span class="dot">·</span>
+            <span>43 chapters</span><span class="dot">·</span>
+            <span>Ages 14+</span>
+          </div>
+
+          <p class="body-text">
+            Lira is a prisoner of the Threadweavers, and the thread they want is older than the institution holding her. The legend they pretend they don't believe in is sitting in a cell, breathing.
+          </p>
+          <p class="body-text">
+            Tieran is leading the rescue. The Untied are with him. So are people he is not sure he can trust. The system is louder now and the system is also weaker than it has ever been, and both of those things are true at the same time.
+          </p>
+          <p class="body-text">
+            The choice waiting at the end of this book is the one the entire series has been building toward. Lira can keep her bond and the system. Or she can break the bond and break the system. There is no version where she keeps both.
+          </p>
+
+          <p class="book-detail-pull">
+            "The First Pair did not survive. Lira is paying attention to that."
+          </p>
+
+          <p class="body-text">
+            Thread of White closes the Discovery arc of The Pairing and sets up the Rebellion arc that follows.
+          </p>
+
+          <div class="book-detail-actions">
+            <a class="btn btn-primary" href={amazonUrl} target="_blank" rel="noopener">Buy on Amazon</a>
+            <a class="btn btn-ghost" href="/the-pairing">Inside the world</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tinted">
+    <div class="wrap">
+      <EmailSignup
+        headline="Book Four opens the Rebellion arc."
+        sub="Get the cover, title, and release date in the newsletter before anyone else."
+      />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EmailSignup from '../../components/EmailSignup.astro';
+
+const amazonUrl = 'https://www.amazon.com/Thread-Gold-Pairing-Caleb-Arlow/dp/B0GNKB2N8Q/';
+---
+
+<BaseLayout
+  title="Thread of Gold · Book One of The Pairing"
+  description="Lira sees threads. At thirteen she meets Tieran, and the thread between them turns a color it shouldn't. Book One of The Pairing by Caleb Arlow."
+  ogImage="/covers/thread-of-gold.png"
+>
+  <section class="section" style="padding-top: var(--s-9);">
+    <div class="wrap">
+      <p style="margin-bottom: var(--s-5);">
+        <a class="btn-text" href="/books" style="color: var(--paper-300);">← All books</a>
+      </p>
+
+      <div class="book-detail">
+        <div class="book-cover">
+          <img src="/covers/thread-of-gold.png" alt="Thread of Gold cover" />
+        </div>
+
+        <div>
+          <p class="t-eyebrow">Book One · Discovery arc · The Pairing</p>
+          <h1 class="book-detail-title">
+            Thread of <span class="em-italic">Gold.</span>
+          </h1>
+          <div class="book-detail-meta">
+            <span>YA Fantasy</span><span class="dot">·</span>
+            <span>~104K words</span><span class="dot">·</span>
+            <span>33 chapters</span><span class="dot">·</span>
+            <span>Ages 14+</span>
+          </div>
+
+          <p class="body-text">
+            Lira sees threads. The colored bonds between paired people light up for her like nobody else in the city can manage, and she has been told her whole life to keep that quiet.
+          </p>
+          <p class="body-text">
+            At thirteen she meets Tieran. Their threads tangle on contact. The color the bond turns is not a color the Threadweavers admit exists. White is a problem. White is a flag.
+          </p>
+          <p class="body-text">
+            The Threadweavers say their job is to protect pairings. What Lira begins to see, once she knows where to look, is that protection is the wrong word. The threads are not being kept safe. They are being read.
+          </p>
+
+          <p class="book-detail-pull">
+            "She is thirteen years old and she is already the variable they cannot solve for."
+          </p>
+
+          <p class="body-text">
+            Thread of Gold is Book One of The Pairing, a 12-book YA fantasy series. It opens the Discovery arc and introduces a magic system, a romance, and a regime that has lasted because nobody has ever been born who could see what Lira sees.
+          </p>
+
+          <div class="book-detail-actions">
+            <a class="btn btn-primary" href={amazonUrl} target="_blank" rel="noopener">Buy on Amazon</a>
+            <a class="btn btn-ghost" href="/books/thread-of-silver">Continue to Book Two →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tinted">
+    <div class="wrap">
+      <EmailSignup
+        headline="Get Book Four first."
+        sub="New release alerts, cover reveals, and early chapters land in the newsletter before they go anywhere else."
+      />
+    </div>
+  </section>
+</BaseLayout>

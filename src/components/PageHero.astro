@@ -1,0 +1,32 @@
+---
+export interface Props {
+  eyebrow?: string;
+  eyebrowVariant?: 'gold' | 'silver' | 'white';
+  wrap?: 'default' | 'narrow' | 'text';
+}
+
+const { eyebrow, eyebrowVariant = 'gold', wrap = 'text' } = Astro.props;
+
+const wrapClass =
+  wrap === 'narrow' ? 'wrap-narrow' : wrap === 'default' ? 'wrap' : 'wrap-text';
+
+const eyebrowClass =
+  eyebrowVariant === 'silver' ? 't-eyebrow silver'
+  : eyebrowVariant === 'white' ? 't-eyebrow white'
+  : 't-eyebrow';
+
+const hasActions = Astro.slots.has('actions');
+---
+
+<section class="page-hero">
+  <div class={wrapClass}>
+    {eyebrow && <p class={`${eyebrowClass} reveal`}>{eyebrow}</p>}
+    <h1 class="reveal d1"><slot name="title" /></h1>
+    <p class="lead reveal d2"><slot name="lead" /></p>
+    {hasActions && (
+      <div class="page-hero-actions reveal d3">
+        <slot name="actions" />
+      </div>
+    )}
+  </div>
+</section>

@@ -1,0 +1,33 @@
+---
+/**
+ * BookCard. Cover + title + blurb + Amazon CTA.
+ * Used on the homepage and the /books index.
+ */
+export interface Props {
+  cover: string;
+  coverAlt: string;
+  meta: string;          // e.g. "Book One · The Pairing"
+  title: string;
+  blurb: string;
+  amazonUrl?: string;
+  detailUrl: string;
+}
+const { cover, coverAlt, meta, title, blurb, amazonUrl, detailUrl } = Astro.props;
+---
+
+<article class="book-card">
+  <a href={detailUrl} class="book-cover" aria-label={`Open ${title}`}>
+    <img src={cover} alt={coverAlt} />
+  </a>
+  <p class="book-card-meta">{meta}</p>
+  <h3 class="book-card-title">
+    <a href={detailUrl}>{title}</a>
+  </h3>
+  <p class="book-card-blurb">{blurb}</p>
+  <div class="book-card-actions">
+    {amazonUrl && (
+      <a class="btn btn-primary btn-small" href={amazonUrl} target="_blank" rel="noopener">Buy on Amazon</a>
+    )}
+    <a class="btn-text" href={detailUrl}>Read more</a>
+  </div>
+</article>

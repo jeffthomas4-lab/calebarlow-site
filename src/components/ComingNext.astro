@@ -1,0 +1,36 @@
+---
+/**
+ * ComingNext. Faceless cover-block tease for the next book.
+ * Title intentionally hidden per the series strategy.
+ */
+export interface Props {
+  bookNumber: number;
+  arc?: string;
+  teaser: string;
+}
+const { bookNumber, arc, teaser } = Astro.props;
+---
+
+<section class="coming-next">
+  <div class="wrap">
+    <div class="coming-next-inner">
+      <div class="coming-next-block" aria-label={`Book ${bookNumber}, coming soon`}>
+        <div>
+          <p class="label">Coming next</p>
+          <p class="num">{bookNumber}<small>The Pairing</small></p>
+        </div>
+      </div>
+      <div>
+        <p class="t-eyebrow silver">Book {bookNumber} · {arc ?? 'In production'}</p>
+        <h2 class="t-h2" style="margin-top: var(--s-3); margin-bottom: var(--s-4);">
+          The next thread is being woven.
+        </h2>
+        <p class="body-text">{teaser}</p>
+        <p class="body-text" style="color: var(--fg-muted); font-style: italic;">
+          Cover, title, and release date revealed to the newsletter first.
+        </p>
+        <a class="btn btn-ghost" href="/#newsletter" style="margin-top: var(--s-5);">Get the reveal</a>
+      </div>
+    </div>
+  </div>
+</section>

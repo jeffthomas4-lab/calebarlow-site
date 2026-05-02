@@ -1,0 +1,61 @@
+---
+/**
+ * EmailSignup. ConvertKit (Kit) signup form.
+ *
+ * SETUP:
+ *   1. In your ConvertKit/Kit account, create a form. Get the embed code.
+ *      It will include `data-uid="XXXXXXXXXX"` and an action URL like
+ *      `https://app.kit.com/forms/NNNNNNN/subscriptions`.
+ *   2. Replace KIT_FORM_ACTION and KIT_DATA_UID below.
+ *   3. That's it. The styles match the site; no Kit chrome shows.
+ *
+ * Until those are set, the form posts to a placeholder and won't capture
+ * subscribers. It still LOOKS correct in dev so you can review the design.
+ */
+
+export interface Props {
+  headline?: string;
+  sub?: string;
+  buttonLabel?: string;
+  fineprint?: string;
+}
+
+const {
+  headline = 'Be first to know when the next book drops.',
+  sub = 'New release announcements and pre-order links. No filler.',
+  buttonLabel = 'Send updates',
+  fineprint = 'No spam. Unsubscribe anytime.',
+} = Astro.props;
+
+// Kit form: "Join the Newsletter" (form ID 9393474, uid d9521163e3)
+const KIT_FORM_ACTION = 'https://app.kit.com/forms/9393474/subscriptions';
+const KIT_FORM_ID     = '9393474';
+const KIT_DATA_UID    = 'd9521163e3';
+---
+
+<div class="signup" id="newsletter">
+  <h2 class="signup-headline">{headline}</h2>
+  <p class="signup-sub">{sub}</p>
+  <form
+    action={KIT_FORM_ACTION}
+    method="post"
+    class="signup-form seva-form formkit-form"
+    data-sv-form={KIT_FORM_ID}
+    data-uid={KIT_DATA_UID}
+    data-format="inline"
+    data-version="5"
+  >
+    <input
+      class="signup-input"
+      name="email_address"
+      type="email"
+      required
+      placeholder="your@email.com"
+      aria-label="Email address"
+    />
+    <button class="btn btn-primary" type="submit">{buttonLabel}</button>
+  </form>
+  <p class="signup-fineprint">{fineprint}</p>
+</div>
+
+<script src="https://f.convertkit.com/ckjs/ck.5.js" is:inline></script>

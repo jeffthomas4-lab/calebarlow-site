@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EmailSignup from '../../components/EmailSignup.astro';
+
+const amazonUrl = 'https://www.amazon.com/Thread-Silver-Pairing-Book-ebook/dp/B0GSJ97FQX/';
+---
+
+<BaseLayout
+  title="Thread of Silver · Book Two of The Pairing"
+  description="They came for Lira at the library. They came for Tieran an hour later. Book Two of The Pairing by Caleb Arlow."
+  ogImage="/covers/thread-of-silver.png"
+>
+  <section class="section" style="padding-top: var(--s-9);">
+    <div class="wrap">
+      <p style="margin-bottom: var(--s-5);">
+        <a class="btn-text" href="/books" style="color: var(--paper-300);">← All books</a>
+      </p>
+
+      <div class="book-detail">
+        <div class="book-cover">
+          <img src="/covers/thread-of-silver.png" alt="Thread of Silver cover" />
+        </div>
+
+        <div>
+          <p class="t-eyebrow silver">Book Two · Discovery arc · The Pairing</p>
+          <h1 class="book-detail-title">
+            Thread of <span class="em-italic" style="color: var(--thread-silver-2);">Silver.</span>
+          </h1>
+          <div class="book-detail-meta">
+            <span>YA Fantasy</span><span class="dot">·</span>
+            <span>~172K words</span><span class="dot">·</span>
+            <span>27 chapters</span><span class="dot">·</span>
+            <span>Ages 14+</span>
+          </div>
+
+          <p class="body-text">
+            They came for Lira at the library. They came for Tieran an hour later. He doesn't know they have her. She doesn't know they have him. Both will, soon, in the most efficient way the Threadweavers know how to do it.
+          </p>
+          <p class="body-text">
+            The interrogation is not about what Lira did. It is about what her thread is, and the people asking the questions already know more about her than she does. They will ask her to give it up. Tieran will be in the next room.
+          </p>
+          <p class="body-text">
+            Threads can carry messages the system cannot read. Threads can also be cut. The book is about both.
+          </p>
+
+          <p class="book-detail-pull">
+            "The thread did not snap. She made a choice, and the choice was the thing that frayed it."
+          </p>
+
+          <p class="body-text">
+            Thread of Silver is Book Two of The Pairing. It is the book where Lira learns how the system actually works, and what it costs to know.
+          </p>
+
+          <div class="book-detail-actions">
+            <a class="btn btn-primary" href={amazonUrl} target="_blank" rel="noopener">Buy on Amazon</a>
+            <a class="btn btn-ghost" href="/books/thread-of-white">Continue to Book Three →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tinted">
+    <div class="wrap">
+      <EmailSignup
+        headline="Don't miss Book Four."
+        sub="The Rebellion arc opens with Book Four. Get the cover, title, and release date in the newsletter first."
+      />
+    </div>
+  </section>
+</BaseLayout>

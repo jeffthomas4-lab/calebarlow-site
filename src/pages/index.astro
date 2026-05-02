@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BookCard from '../components/BookCard.astro';
+import ComingNext from '../components/ComingNext.astro';
+import EmailSignup from '../components/EmailSignup.astro';
+---
+
+<BaseLayout
+  title="Caleb Arlow · The Pairing"
+  description="The Pairing series by Caleb Arlow. A 12-book YA fantasy where bonds appear as colored threads, the system maps them, and a girl with a white thread is the one variable nobody coded for."
+>
+  <!-- Hero -->
+  <section class="page-hero" style="padding-top: var(--s-10); padding-bottom: var(--s-9);">
+    <div class="wrap-text" style="text-align: center;">
+      <p class="t-eyebrow reveal" style="justify-content: center;">A 12-book YA fantasy series</p>
+      <h1 class="reveal d1" style="margin-left: auto; margin-right: auto;">
+        The Pairing.
+        <span class="em-italic" style="display: block; font-size: 0.78em; margin-top: var(--s-3);">Every bond is a thread. Every thread is watched.</span>
+      </h1>
+      <p class="lead reveal d2" style="margin-left: auto; margin-right: auto;">
+        Three books out. Nine to come. Start with Thread of Gold.
+      </p>
+      <div class="page-hero-actions reveal d3" style="justify-content: center;">
+        <a class="btn btn-primary" href="/books/thread-of-gold">Read Book One</a>
+        <a class="btn btn-ghost" href="/the-pairing">Inside the world</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books grid -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head" style="display: flex; justify-content: space-between; align-items: end; gap: var(--s-5); flex-wrap: wrap;">
+        <div>
+          <p class="t-eyebrow">The first three books</p>
+          <h2 class="t-h2" style="margin-top: var(--s-3);">Available now.</h2>
+        </div>
+        <a class="btn-text" href="/books">See all books</a>
+      </div>
+
+      <div class="book-grid-three">
+        <BookCard
+          cover="/covers/thread-of-gold.png"
+          coverAlt="Thread of Gold cover"
+          meta="Book One · The Pairing"
+          title="Thread of Gold"
+          blurb="Lira sees threads. At thirteen she meets Tieran, and the thread between them turns a color it should not. The Threadweavers say they protect pairings. They watch them, and the watching is the point."
+          amazonUrl="https://www.amazon.com/Thread-Gold-Pairing-Caleb-Arlow/dp/B0GNKB2N8Q/"
+          detailUrl="/books/thread-of-gold"
+        />
+        <BookCard
+          cover="/covers/thread-of-silver.png"
+          coverAlt="Thread of Silver cover"
+          meta="Book Two · The Pairing"
+          title="Thread of Silver"
+          blurb="They came for Lira at the library. They came for Tieran an hour later. Now she is in a cell and he is being made to listen. Her thread is the only way out, and using it might be the thing that snaps it."
+          amazonUrl="https://www.amazon.com/Thread-Silver-Pairing-Book-ebook/dp/B0GSJ97FQX/"
+          detailUrl="/books/thread-of-silver"
+        />
+        <BookCard
+          cover="/covers/thread-of-white.png"
+          coverAlt="Thread of White cover"
+          meta="Book Three · The Pairing"
+          title="Thread of White"
+          blurb="Lira is a prisoner, and her thread is older than the system that built her cell. The Untied are coming. Tieran is leading them. What she chooses next will either tear the Threadweavers apart or finish her."
+          amazonUrl="https://www.amazon.com/dp/B0GZ93ZSM4"
+          detailUrl="/books/thread-of-white"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming next -->
+  <ComingNext
+    bookNumber={4}
+    arc="Rebellion arc"
+    teaser="Two years after the events of Book 3, the threads have stopped being a secret. The resistance has a name. Lira and Tieran are no longer hiding, and the people who run the system know exactly who to send."
+  />
+
+  <!-- World snippet -->
+  <section class="section section-tinted">
+    <div class="wrap-text" style="text-align: center;">
+      <p class="t-eyebrow silver" style="justify-content: center;">Inside The Pairing</p>
+      <h2 class="t-h2" style="margin: var(--s-3) 0 var(--s-5);">
+        Threads. <span class="em-italic">Pairings.</span> A system that calls them love.
+      </h2>
+      <p class="body-text" style="max-width: 56ch; margin: 0 auto;">
+        Every citizen is paired at thirteen. The bond shows up as a colored thread, and the color tells the system what kind of love it is dealing with. Gold is rare. White is impossible. Lira is impossible.
+      </p>
+      <a class="btn btn-ghost" href="/the-pairing" style="margin-top: var(--s-6);">Read the world overview</a>
+    </div>
+  </section>
+
+  <!-- Email signup -->
+  <section class="section">
+    <div class="wrap">
+      <EmailSignup
+        headline="Be first when the next thread drops."
+        sub="New release announcements, cover reveals, and early excerpts. Reader list only. No filler."
+      />
+    </div>
+  </section>
+</BaseLayout>

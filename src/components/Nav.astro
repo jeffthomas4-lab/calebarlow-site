@@ -1,0 +1,54 @@
+---
+export interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '' } = Astro.props;
+
+const links = [
+  { href: '/books', label: 'Books' },
+  { href: '/the-pairing', label: 'The Series' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const isActive = (href: string) => {
+  if (href === '/') return currentPath === '/';
+  return currentPath === href || currentPath.startsWith(href + '/');
+};
+---
+
+<header class="nav">
+  <a class="nav-brand" href="/" aria-label="Caleb Arlow, home">
+    <span>Caleb</span><span class="ampersand">·</span><span>Arlow</span>
+  </a>
+  <nav>
+    <ul class="nav-links">
+      {links.map((l) => (
+        <li>
+          <a
+            class={`nav-link${isActive(l.href) ? ' active' : ''}`}
+            href={l.href}
+            aria-current={isActive(l.href) ? 'page' : undefined}
+          >
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+  <a class="btn btn-primary btn-small" href="/#newsletter">Get Updates</a>
+  <button class="nav-menu-btn" aria-label="Open menu" data-nav-toggle>Menu</button>
+</header>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('[data-nav-toggle]');
+  const header = document.querySelector<HTMLElement>('header.nav');
+  if (btn && header) {
+    btn.addEventListener('click', () => {
+      header.classList.toggle('is-open');
+      const open = header.classList.contains('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'Close' : 'Menu';
+    });
+  }
+</script>

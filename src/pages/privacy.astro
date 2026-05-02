@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const updated = '2026-05-01';
+---
+
+<BaseLayout title="Privacy · Caleb Arlow">
+  <PageHero eyebrow="Privacy">
+    <Fragment slot="title">Privacy.</Fragment>
+    <Fragment slot="lead">
+      The short version: this site collects an email address if you give it, an analytics ping if you visit, and nothing else.
+    </Fragment>
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap-text">
+      <p class="body-text"><strong>Last updated:</strong> {updated}</p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Email</h2>
+      <p class="body-text">
+        If you sign up for the newsletter, your email is stored with our email provider (ConvertKit/Kit). It is used to send book release announcements and related updates. You can unsubscribe at any time using the link in any email.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Analytics</h2>
+      <p class="body-text">
+        This site uses Google Analytics 4 with anonymized IP addresses. It records anonymous traffic data so we know which pages people read. It does not track you across other sites.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Affiliate links</h2>
+      <p class="body-text">
+        Amazon links on this site may include an affiliate tag. If you buy a book through one, the publisher receives a small commission at no extra cost to you.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Contact</h2>
+      <p class="body-text">
+        Questions about privacy or data: <a href="mailto:authorcalebarlow@gmail.com" style="color: var(--thread-gold);">authorcalebarlow@gmail.com</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

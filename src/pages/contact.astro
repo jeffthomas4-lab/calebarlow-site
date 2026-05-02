@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<BaseLayout title="Contact · Caleb Arlow">
+  <PageHero eyebrow="Contact">
+    <Fragment slot="title">Get in touch.</Fragment>
+    <Fragment slot="lead">
+      For press, reviews, BookTok and bookstagram requests, rights inquiries, or anything else, this is the right address.
+    </Fragment>
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p class="t-eyebrow">Direct</p>
+          <h3 class="t-h3" style="margin: var(--s-3) 0;">Email</h3>
+          <p class="body-text" style="margin-bottom: var(--s-4);">
+            Questions, review copies, interviews, rights, anything else.
+          </p>
+          <a class="btn btn-primary" href="mailto:authorcalebarlow@gmail.com">authorcalebarlow@gmail.com</a>
+          <p class="body-text" style="margin-top: var(--s-4); color: var(--fg-muted); font-size: 0.9rem;">
+            Replies usually inside a few business days.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <p class="t-eyebrow silver">Readers</p>
+          <h3 class="t-h3" style="margin: var(--s-3) 0;">Newsletter</h3>
+          <p class="body-text" style="margin-bottom: var(--s-4);">
+            For new release alerts, cover reveals, and early excerpts, the newsletter is the fastest way in.
+          </p>
+          <a class="btn btn-ghost" href="/#newsletter">Join the list</a>
+        </div>
+      </div>
+
+      <div class="contact-note">
+        <p class="t-eyebrow">A note on the author</p>
+        <p class="body-text" style="margin-top: var(--s-3);">
+          Caleb Arlow writes under a pseudonym and does not do face-out interviews or events. Email is the channel. The work is the work.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-5);
+    margin-bottom: var(--s-7);
+  }
+  @media (max-width: 720px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  .contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: var(--s-6);
+  }
+  .contact-note {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: var(--s-6);
+  }
+</style>
