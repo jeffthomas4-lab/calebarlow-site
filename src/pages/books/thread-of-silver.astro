@@ -1,15 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
+import BookSchema from '../../components/BookSchema.astro';
 
 const amazonUrl = 'https://www.amazon.com/Thread-Silver-Pairing-Book-ebook/dp/B0GSJ97FQX/';
+const sampleUrl = 'https://www.amazon.com/Thread-Silver-Pairing-Book-ebook/dp/B0GSJ97FQX/#reader_B0GSJ97FQX';
 ---
 
 <BaseLayout
   title="Thread of Silver · Book Two of The Pairing"
-  description="They came for Lira at the library. They came for Tieran an hour later. Book Two of The Pairing by Caleb Arlow."
+  description="They came for Lira at the library. They came for Tieran an hour later. Book Two of The Pairing by Caleb Arlow. Free with Kindle Unlimited."
   ogImage="/covers/thread-of-silver.png"
 >
+  <BookSchema
+    name="Thread of Silver"
+    bookNumber={2}
+    cover="/covers/thread-of-silver.png"
+    url="/books/thread-of-silver"
+    amazonUrl={amazonUrl}
+    description="They came for Lira at the library. They came for Tieran an hour later. Book Two of The Pairing, a 12-book YA fantasy romance series."
+  />
   <section class="section" style="padding-top: var(--s-9);">
     <div class="wrap">
       <p style="margin-bottom: var(--s-5);">
@@ -22,25 +32,33 @@ const amazonUrl = 'https://www.amazon.com/Thread-Silver-Pairing-Book-ebook/dp/B0
         </div>
 
         <div>
-          <p class="t-eyebrow silver">Book Two · Discovery arc · The Pairing</p>
+          <p class="t-eyebrow silver">Book Two · Discovery arc · Free in KU</p>
           <h1 class="book-detail-title">
             Thread of <span class="em-italic" style="color: var(--thread-silver-2);">Silver.</span>
           </h1>
           <div class="book-detail-meta">
-            <span>YA Fantasy</span><span class="dot">·</span>
+            <span>YA Fantasy Romance</span><span class="dot">·</span>
             <span>~172K words</span><span class="dot">·</span>
             <span>27 chapters</span><span class="dot">·</span>
             <span>Ages 14+</span>
           </div>
 
+          <div class="trope-row">
+            <span class="trope">Forced separation</span>
+            <span class="trope">Surveillance romance</span>
+            <span class="trope">Secret messages</span>
+            <span class="trope">Found family</span>
+            <span class="trope">Slow burn</span>
+          </div>
+
           <p class="body-text">
-            They came for Lira at the library. They came for Tieran an hour later. He doesn't know they have her. She doesn't know they have him. Both will, soon, in the most efficient way the Threadweavers know how to do it.
+            They came for Lira at the library. They came for Tieran an hour later.
           </p>
           <p class="body-text">
-            The interrogation is not about what Lira did. It is about what her thread is, and the people asking the questions already know more about her than she does. They will ask her to give it up. Tieran will be in the next room.
+            She's in a cell. He's in the next room. The Threadweavers want to know what her thread is, and they already know more about her than she does. The interrogation is calm and patient and it will not stop. They'll let her hear him.
           </p>
           <p class="body-text">
-            Threads can carry messages the system cannot read. Threads can also be cut. The book is about both.
+            The thread between them carries messages the system cannot read. The thread can also be cut. The whole book is about both.
           </p>
 
           <p class="book-detail-pull">
@@ -48,13 +66,16 @@ const amazonUrl = 'https://www.amazon.com/Thread-Silver-Pairing-Book-ebook/dp/B0
           </p>
 
           <p class="body-text">
-            Thread of Silver is Book Two of The Pairing. It is the book where Lira learns how the system actually works, and what it costs to know.
+            Thread of Silver is Book Two of The Pairing. The book where Lira learns how the system actually works, and what it costs to know.
           </p>
 
           <div class="book-detail-actions">
-            <a class="btn btn-primary" href={amazonUrl} target="_blank" rel="noopener">Buy on Amazon</a>
-            <a class="btn btn-ghost" href="/books/thread-of-white">Continue to Book Three →</a>
+            <a class="btn btn-primary" href={amazonUrl} target="_blank" rel="noopener">Read on Amazon · Free in KU</a>
+            <a class="btn btn-ghost" href={sampleUrl} target="_blank" rel="noopener">Read a sample</a>
           </div>
+          <p style="margin-top: var(--s-3); font-size: 0.85rem; color: var(--fg-muted);">
+            New here? <a href="/books/thread-of-gold" style="color: var(--thread-gold);">← Start with Book One</a> · Or <a href="/books/thread-of-white" style="color: var(--thread-gold);">continue to Book Three →</a>
+          </p>
         </div>
       </div>
     </div>
@@ -63,9 +84,29 @@ const amazonUrl = 'https://www.amazon.com/Thread-Silver-Pairing-Book-ebook/dp/B0
   <section class="section section-tinted">
     <div class="wrap">
       <EmailSignup
-        headline="Don't miss Book Four."
-        sub="The Rebellion arc opens with Book Four. Get the cover, title, and release date in the newsletter first."
+        headline="Don't miss the Rebellion arc."
+        sub="Book Four opens with Lira and Tieran no longer hiding. Get the cover and release date in the newsletter first."
       />
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .trope-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    margin: 0 0 var(--s-5);
+  }
+  .trope {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--paper-100);
+    background: rgba(200, 204, 210, 0.10);
+    border: 1px solid rgba(200, 204, 210, 0.30);
+    padding: 0.4rem 0.7rem;
+  }
+</style>

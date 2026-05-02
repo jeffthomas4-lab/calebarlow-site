@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<BaseLayout title="Press &amp; Media · Caleb Arlow">
+  <PageHero eyebrow="Press &amp; Media Kit">
+    <Fragment slot="title">For reviewers and creators.</Fragment>
+    <Fragment slot="lead">
+      Hi-res cover art, blurb copy, author bio, and contact for BookTok, Bookstagram, bloggers, podcasters, and traditional press.
+    </Fragment>
+  </PageHero>
+
+  <!-- Quick facts -->
+  <section class="section">
+    <div class="wrap-text">
+      <p class="t-eyebrow">Quick facts</p>
+      <h2 class="t-h2" style="margin: var(--s-3) 0 var(--s-5);">The Pairing series.</h2>
+
+      <dl class="press-facts">
+        <dt>Author</dt><dd>Caleb Arlow (pseudonym)</dd>
+        <dt>Genre</dt><dd>YA Fantasy Romance</dd>
+        <dt>Series length</dt><dd>12 books across four arcs (Discovery, Rebellion, Transformation, Legacy)</dd>
+        <dt>Books published</dt><dd>3 of 12 (Thread of Gold, Thread of Silver, Thread of White)</dd>
+        <dt>Format</dt><dd>Kindle Unlimited and ebook on Amazon</dd>
+        <dt>For readers of</dt><dd>Matched, Delirium, Red Queen, Powerless</dd>
+        <dt>Tropes</dt><dd>Fated bond, slow burn, forbidden romance, color-coded magic, surveillance state, generational legacy</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Cover downloads -->
+  <section class="section section-tinted">
+    <div class="wrap">
+      <p class="t-eyebrow silver">Hi-res covers</p>
+      <h2 class="t-h2" style="margin: var(--s-3) 0 var(--s-6);">Download for reviews and posts.</h2>
+      <p class="body-text" style="max-width: 60ch; margin-bottom: var(--s-7);">
+        Right-click and save. Free to use in reviews, social posts, blog features, and any honest coverage of the series.
+      </p>
+
+      <div class="cover-grid">
+        <div class="cover-download">
+          <a href="/covers/thread-of-gold.png" download>
+            <img src="/covers/thread-of-gold.png" alt="Thread of Gold cover" />
+          </a>
+          <p class="cover-name">Thread of Gold</p>
+          <a class="btn-text" href="/covers/thread-of-gold.png" download>Download cover</a>
+        </div>
+        <div class="cover-download">
+          <a href="/covers/thread-of-silver.png" download>
+            <img src="/covers/thread-of-silver.png" alt="Thread of Silver cover" />
+          </a>
+          <p class="cover-name">Thread of Silver</p>
+          <a class="btn-text" href="/covers/thread-of-silver.png" download>Download cover</a>
+        </div>
+        <div class="cover-download">
+          <a href="/covers/thread-of-white.png" download>
+            <img src="/covers/thread-of-white.png" alt="Thread of White cover" />
+          </a>
+          <p class="cover-name">Thread of White</p>
+          <a class="btn-text" href="/covers/thread-of-white.png" download>Download cover</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blurbs -->
+  <section class="section">
+    <div class="wrap-text">
+      <p class="t-eyebrow">Series blurb (use freely)</p>
+      <h2 class="t-h3" style="margin: var(--s-3) 0 var(--s-5);">For social and reviews.</h2>
+
+      <div class="press-blurb">
+        <p><strong>Short (1 line):</strong></p>
+        <p class="quote">A 12-book YA fantasy romance where every bond is a literal thread, the government decides what color it's allowed to be, and one girl's thread is the color that's not supposed to exist.</p>
+      </div>
+
+      <div class="press-blurb">
+        <p><strong>Medium (paragraph):</strong></p>
+        <p class="quote">Lira sees threads. The colored bonds between paired people light up for her like nobody else can manage. At thirteen she's paired with Tieran, and the thread between them turns gold, a color the Threadweavers have spent forty years pretending isn't real. The Threadweavers don't protect pairings. They watch them. And they have never seen a thread like this. The Pairing is a 12-book YA fantasy romance series for readers of Matched, Delirium, Red Queen, and Powerless.</p>
+      </div>
+
+      <div class="press-blurb">
+        <p><strong>Author bio:</strong></p>
+        <p class="quote">Caleb Arlow writes under a pseudonym and does not do in-person events. The Pairing is his debut series.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-tinted">
+    <div class="wrap-text" style="text-align: center;">
+      <p class="t-eyebrow gold" style="justify-content: center;">Press inquiries</p>
+      <h2 class="t-h2" style="margin: var(--s-3) 0 var(--s-5);">Get in touch.</h2>
+      <p class="body-text" style="max-width: 56ch; margin: 0 auto var(--s-6);">
+        For interviews, ARC requests, podcast invites, blog tour participation, and reviewer questions, email is the fastest path. Replies usually inside a few business days.
+      </p>
+      <a class="btn btn-primary" href="mailto:authorcalebarlow@gmail.com">authorcalebarlow@gmail.com</a>
+      <div style="display: flex; gap: var(--s-3); justify-content: center; margin-top: var(--s-5); flex-wrap: wrap;">
+        <a class="btn btn-ghost btn-small" href="https://www.tiktok.com/@caleb.arlow" target="_blank" rel="noopener">TikTok</a>
+        <a class="btn btn-ghost btn-small" href="https://www.instagram.com/calebarlow/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ghost btn-small" href="https://www.pinterest.com/authorcalebarlow/" target="_blank" rel="noopener">Pinterest</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .press-facts {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: var(--s-3) var(--s-5);
+    margin-top: var(--s-5);
+  }
+  @media (max-width: 540px) {
+    .press-facts { grid-template-columns: 1fr; gap: var(--s-1) var(--s-2); }
+    .press-facts dt { margin-top: var(--s-3); }
+  }
+  .press-facts dt {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--thread-gold);
+    padding-top: 0.2rem;
+  }
+  .press-facts dd {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--fg-secondary);
+    margin: 0;
+  }
+
+  .cover-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-7);
+  }
+  @media (max-width: 720px) {
+    .cover-grid { grid-template-columns: 1fr; gap: var(--s-5); }
+  }
+  .cover-download {
+    text-align: center;
+  }
+  .cover-download a img {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    margin: 0 auto var(--s-3);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+  .cover-download a:hover img { transform: translateY(-2px); }
+  .cover-name {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--paper-50);
+    margin-bottom: var(--s-2);
+  }
+
+  .press-blurb {
+    margin: var(--s-6) 0;
+  }
+  .press-blurb p {
+    font-family: var(--font-serif);
+  }
+  .press-blurb .quote {
+    background: var(--bg-card);
+    border-left: 3px solid var(--thread-gold);
+    padding: var(--s-4) var(--s-5);
+    margin-top: var(--s-2);
+    color: var(--paper-100);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+</style>

@@ -12,18 +12,21 @@ import EmailSignup from '../components/EmailSignup.astro';
   <!-- Hero -->
   <section class="page-hero" style="padding-top: var(--s-10); padding-bottom: var(--s-9);">
     <div class="wrap-text" style="text-align: center;">
-      <p class="t-eyebrow reveal" style="justify-content: center;">A 12-book YA fantasy series</p>
+      <p class="t-eyebrow reveal" style="justify-content: center;">12-book YA fantasy romance · The Pairing</p>
       <h1 class="reveal d1" style="margin-left: auto; margin-right: auto;">
-        The Pairing.
-        <span class="em-italic" style="display: block; font-size: 0.78em; margin-top: var(--s-3);">Every bond is a thread. Every thread is watched.</span>
+        Every bond is a thread.
+        <span class="em-italic" style="display: block; font-size: 0.78em; margin-top: var(--s-3);">Hers shouldn't exist.</span>
       </h1>
       <p class="lead reveal d2" style="margin-left: auto; margin-right: auto;">
-        Three books out. Nine to come. Start with Thread of Gold.
+        Lira sees a color the system says is impossible. The boy on the other end of her thread is the one person who's not supposed to know. Fated bond. Slow burn. A regime that wants them dissolved.
       </p>
       <div class="page-hero-actions reveal d3" style="justify-content: center;">
-        <a class="btn btn-primary" href="/books/thread-of-gold">Read Book One</a>
+        <a class="btn btn-primary" href="/books/thread-of-gold">Start with Thread of Gold</a>
         <a class="btn btn-ghost" href="/the-pairing">Inside the world</a>
       </div>
+      <p class="reveal d3" style="margin-top: var(--s-5); font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper-300);">
+        ★ Free with Kindle Unlimited
+      </p>
     </div>
   </section>
 
@@ -42,27 +45,27 @@ import EmailSignup from '../components/EmailSignup.astro';
         <BookCard
           cover="/covers/thread-of-gold.png"
           coverAlt="Thread of Gold cover"
-          meta="Book One · The Pairing"
+          meta="Book One · Free in KU"
           title="Thread of Gold"
-          blurb="Lira sees threads. At thirteen she meets Tieran, and the thread between them turns a color it should not. The Threadweavers say they protect pairings. They watch them, and the watching is the point."
+          blurb="Lira's thread is gold. Gold isn't supposed to exist. Tieran is on the other end of it, and the system that paired them has never seen a bond like this. Fated. Watched. Already dangerous."
           amazonUrl="https://www.amazon.com/Thread-Gold-Pairing-Caleb-Arlow/dp/B0GNKB2N8Q/"
           detailUrl="/books/thread-of-gold"
         />
         <BookCard
           cover="/covers/thread-of-silver.png"
           coverAlt="Thread of Silver cover"
-          meta="Book Two · The Pairing"
+          meta="Book Two · Free in KU"
           title="Thread of Silver"
-          blurb="They came for Lira at the library. They came for Tieran an hour later. Now she is in a cell and he is being made to listen. Her thread is the only way out, and using it might be the thing that snaps it."
+          blurb="They came for Lira at the library. They came for Tieran an hour later. Now she's in a cell and he's being made to listen. Her thread is the only way to reach him, and using it might be the thing that snaps it."
           amazonUrl="https://www.amazon.com/Thread-Silver-Pairing-Book-ebook/dp/B0GSJ97FQX/"
           detailUrl="/books/thread-of-silver"
         />
         <BookCard
           cover="/covers/thread-of-white.png"
           coverAlt="Thread of White cover"
-          meta="Book Three · The Pairing"
+          meta="Book Three · Free in KU"
           title="Thread of White"
-          blurb="Lira is a prisoner, and her thread is older than the system that built her cell. The Untied are coming. Tieran is leading them. What she chooses next will either tear the Threadweavers apart or finish her."
+          blurb="Lira is a prisoner. Her thread is older than the system that built her cell. Tieran is leading the rescue. The choice at the end of this book breaks the Discovery arc wide open and sets up the rebellion."
           amazonUrl="https://www.amazon.com/dp/B0GZ93ZSM4"
           detailUrl="/books/thread-of-white"
         />
@@ -74,20 +77,33 @@ import EmailSignup from '../components/EmailSignup.astro';
   <ComingNext
     bookNumber={4}
     arc="Rebellion arc"
-    teaser="Two years after the events of Book 3, the threads have stopped being a secret. The resistance has a name. Lira and Tieran are no longer hiding, and the people who run the system know exactly who to send."
+    teaser="Two years after Thread of White. The resistance has a name. Lira and Tieran are no longer hiding, and their bond is a target. Trust is the most dangerous thing in the world."
   />
 
   <!-- World snippet -->
   <section class="section section-tinted">
     <div class="wrap-text" style="text-align: center;">
-      <p class="t-eyebrow silver" style="justify-content: center;">Inside The Pairing</p>
+      <p class="t-eyebrow silver" style="justify-content: center;">The world</p>
       <h2 class="t-h2" style="margin: var(--s-3) 0 var(--s-5);">
-        Threads. <span class="em-italic">Pairings.</span> A system that calls them love.
+        Every citizen gets a thread at thirteen.
       </h2>
       <p class="body-text" style="max-width: 56ch; margin: 0 auto;">
-        Every citizen is paired at thirteen. The bond shows up as a colored thread, and the color tells the system what kind of love it is dealing with. Gold is rare. White is impossible. Lira is impossible.
+        The color tells the system what to do with you. Gold is rare. Red gets watched. Gray means the system has interfered. White is not supposed to exist. Lira is the variable nobody coded for.
       </p>
-      <a class="btn btn-ghost" href="/the-pairing" style="margin-top: var(--s-6);">Read the world overview</a>
+      <a class="btn btn-ghost" href="/the-pairing" style="margin-top: var(--s-6);">Inside the world</a>
+    </div>
+  </section>
+
+  <!-- For fans of -->
+  <section class="section">
+    <div class="wrap-text" style="text-align: center;">
+      <p class="t-eyebrow" style="justify-content: center;">For readers of</p>
+      <h2 class="t-h3" style="margin: var(--s-3) 0 var(--s-5);">
+        <span class="em-italic">Matched</span> · <span class="em-italic">Delirium</span> · <span class="em-italic">Red Queen</span> · <span class="em-italic">Powerless</span>
+      </h2>
+      <p class="body-text" style="max-width: 56ch; margin: 0 auto;">
+        Forbidden romance. Color-coded magic. A government that decides who gets to love who. A bond that refuses to be the thing the system wants it to be.
+      </p>
     </div>
   </section>
 
@@ -95,8 +111,8 @@ import EmailSignup from '../components/EmailSignup.astro';
   <section class="section">
     <div class="wrap">
       <EmailSignup
-        headline="Be first when the next thread drops."
-        sub="New release announcements, cover reveals, and early excerpts. Reader list only. No filler."
+        headline="Get Book Four before anyone else."
+        sub="New release alerts, cover reveals, and early chapters drop in the newsletter first. No spam, no filler."
       />
     </div>
   </section>

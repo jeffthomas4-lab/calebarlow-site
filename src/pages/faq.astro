@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<BaseLayout title="FAQ · The Pairing · Caleb Arlow">
+  <PageHero eyebrow="Reader questions">
+    <Fragment slot="title">FAQ.</Fragment>
+    <Fragment slot="lead">
+      Common questions about The Pairing, the romance, the spice, and the release schedule.
+    </Fragment>
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap-text">
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What age is The Pairing for?</summary>
+          <div class="faq-body">
+            <p>Books 1-3 are written for ages 14+ (upper YA). The protagonists are 13-14 in those books, so the romance is age-appropriate: holding hands, kisses, emotional intimacy, no explicit content.</p>
+            <p>Books 4-6 (Rebellion arc) are 16+. The characters are 15-17 and the romance escalates with them.</p>
+            <p>Books 7-9 (Transformation arc) are 18+ / New Adult. Characters are adults, the romance is married and explicit, and the themes are heavier.</p>
+            <p>Books 10-12 return to YA (15+) with a new generation.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is it spicy?</summary>
+          <div class="faq-body">
+            <p>Discovery arc (Books 1-3): no. Slow burn, kisses, longing, fade-to-black at most.</p>
+            <p>Rebellion arc (Books 4-6): yes, gradually. First sexual content fades in around Book 4, more explicit by Book 6.</p>
+            <p>Transformation arc (Books 7-9): adult intimacy, married sex, pregnancy, postpartum. Open-door scenes.</p>
+            <p>Legacy arc (Books 10-12): back to YA, slow burn, age-appropriate.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are the books in Kindle Unlimited?</summary>
+          <div class="faq-body">
+            <p>Yes. Thread of Gold, Thread of Silver, and Thread of White are all available free with Kindle Unlimited. Books 4-12 will also be KU on release.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need to read in order?</summary>
+          <div class="faq-body">
+            <p>Yes. The Pairing is one continuous story across twelve books. The Discovery arc (Books 1-3) reads as a single piece, and each later book picks up where the previous one ended. Start with Thread of Gold.</p>
+            <p>If you only want to read the Legacy arc (Books 10-12), you can technically start at Book 10 with a different protagonist (Caleb), but you'll miss the emotional weight of the bond the new generation inherits.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What are the tropes?</summary>
+          <div class="faq-body">
+            <p>Fated bond. Slow burn. Forbidden romance. Color-coded magic system. Found family. Government-controlled love. Forced separation. Surveillance. Resistance. Eventual marriage and family. Generational legacy.</p>
+            <p>If you've loved <em>Matched</em>, <em>Delirium</em>, <em>Red Queen</em>, or <em>Powerless</em>, the DNA is here.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are there content warnings?</summary>
+          <div class="faq-body">
+            <p>Yes. The series includes: state surveillance and authoritarian control, forced separation of romantic partners, on-page death of family members (later arcs), grief, the loss of bodily autonomy as a central theme, and (in later arcs) the long psychological aftermath of trauma.</p>
+            <p>The romance itself is consensual throughout. The system the romance exists inside is the antagonist.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How often do new books come out?</summary>
+          <div class="faq-body">
+            <p>Books 1-3 are out now. Book 4 (the first book of the Rebellion arc) is in production. The publishing schedule targets quarterly releases through 2027-2029, with the full series complete by 2030.</p>
+            <p>The newsletter is the fastest way to know exact release dates. Cover reveals and pre-order links go there first.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Will there be audiobooks?</summary>
+          <div class="faq-body">
+            <p>Audiobook plans are in development. The newsletter will announce production updates as they happen.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I share my review or talk about the series online?</summary>
+          <div class="faq-body">
+            <p>Please do. BookTok, Bookstagram, Goodreads, blog reviews, all of it is welcome. Tag <strong>@caleb.arlow</strong> on TikTok, <strong>@calebarlow</strong> on Instagram, and the post might end up on Caleb's profile.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why doesn't the author show his face?</summary>
+          <div class="faq-body">
+            <p>Caleb Arlow writes under a pseudonym. The work is the work. The romance and the world are what matters. No author photo, no in-person events, no interviews. Email is the channel for everything else.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .faq-list {
+    border-top: 1px solid var(--border-subtle);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .faq-item summary {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--paper-50);
+    padding: var(--s-5) 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-4);
+    transition: color var(--dur-base) var(--ease-out);
+  }
+  .faq-item summary:hover { color: var(--thread-gold-2); }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--thread-gold);
+    transition: transform var(--dur-base) var(--ease-out);
+    line-height: 1;
+  }
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+  .faq-body {
+    padding: 0 0 var(--s-6) 0;
+    max-width: 64ch;
+  }
+  .faq-body p {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--fg-secondary);
+  }
+  .faq-body p + p { margin-top: var(--s-3); }
+</style>

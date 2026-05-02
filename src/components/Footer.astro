@@ -8,8 +8,13 @@ const year = new Date().getFullYear();
       <div>
         <div class="footer-brand">Caleb<span class="ampersand">·</span>Arlow</div>
         <p class="footer-tagline">
-          The Pairing. A 12-book YA fantasy series. New books posted here first.
+          The Pairing. A 12-book YA fantasy romance series. New books drop here first.
         </p>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@caleb.arlow" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+          <a href="https://www.instagram.com/calebarlow/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="https://www.pinterest.com/authorcalebarlow/" target="_blank" rel="noopener" aria-label="Pinterest">Pinterest</a>
+        </div>
       </div>
       <div class="footer-col">
         <h4>Read</h4>
@@ -21,8 +26,10 @@ const year = new Date().getFullYear();
       <div class="footer-col">
         <h4>Around</h4>
         <a href="/the-pairing">The Series</a>
+        <a href="/faq">FAQ</a>
+        <a href="/press">Press &amp; Media</a>
         <a href="/#newsletter">Newsletter</a>
-        <a href="/contact">Contact</a>
+        <a href="mailto:authorcalebarlow@gmail.com">authorcalebarlow@gmail.com</a>
       </div>
     </div>
     <div class="footer-fineprint">
@@ -33,3 +40,27 @@ const year = new Date().getFullYear();
     </div>
   </div>
 </footer>
+
+<style is:global>
+  .footer-socials {
+    display: flex;
+    gap: var(--s-3);
+    margin-top: var(--s-4);
+  }
+  .footer-socials a {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--paper-200);
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--border-subtle);
+    transition: all var(--dur-base) var(--ease-out);
+  }
+  .footer-socials a:hover {
+    border-color: var(--thread-gold);
+    color: var(--thread-gold-2);
+  }
+</style>

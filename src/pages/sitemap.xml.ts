@@ -9,6 +9,8 @@ const urls = [
   '/books/thread-of-silver',
   '/books/thread-of-white',
   '/the-pairing',
+  '/faq',
+  '/press',
   '/contact',
   '/privacy',
 ];

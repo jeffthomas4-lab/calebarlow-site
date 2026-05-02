@@ -1,15 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
+import BookSchema from '../../components/BookSchema.astro';
 
 const amazonUrl = 'https://www.amazon.com/Thread-Gold-Pairing-Caleb-Arlow/dp/B0GNKB2N8Q/';
+const sampleUrl = 'https://www.amazon.com/Thread-Gold-Pairing-Caleb-Arlow/dp/B0GNKB2N8Q/#reader_B0GNKB2N8Q';
 ---
 
 <BaseLayout
   title="Thread of Gold · Book One of The Pairing"
-  description="Lira sees threads. At thirteen she meets Tieran, and the thread between them turns a color it shouldn't. Book One of The Pairing by Caleb Arlow."
+  description="Lira's thread is gold. Gold isn't supposed to exist. Book One of The Pairing by Caleb Arlow. Free with Kindle Unlimited."
   ogImage="/covers/thread-of-gold.png"
 >
+  <BookSchema
+    name="Thread of Gold"
+    bookNumber={1}
+    cover="/covers/thread-of-gold.png"
+    url="/books/thread-of-gold"
+    amazonUrl={amazonUrl}
+    description="Lira's thread is gold. Gold isn't supposed to exist. Tieran is on the other end of it, and the system that paired them has never seen a bond like this. Book One of The Pairing, a 12-book YA fantasy romance series."
+  />
   <section class="section" style="padding-top: var(--s-9);">
     <div class="wrap">
       <p style="margin-bottom: var(--s-5);">
@@ -22,25 +32,33 @@ const amazonUrl = 'https://www.amazon.com/Thread-Gold-Pairing-Caleb-Arlow/dp/B0G
         </div>
 
         <div>
-          <p class="t-eyebrow">Book One · Discovery arc · The Pairing</p>
+          <p class="t-eyebrow">Book One · Discovery arc · Free in KU</p>
           <h1 class="book-detail-title">
             Thread of <span class="em-italic">Gold.</span>
           </h1>
           <div class="book-detail-meta">
-            <span>YA Fantasy</span><span class="dot">·</span>
+            <span>YA Fantasy Romance</span><span class="dot">·</span>
             <span>~104K words</span><span class="dot">·</span>
             <span>33 chapters</span><span class="dot">·</span>
             <span>Ages 14+</span>
           </div>
 
+          <div class="trope-row">
+            <span class="trope">Fated bond</span>
+            <span class="trope">Slow burn</span>
+            <span class="trope">Forbidden romance</span>
+            <span class="trope">Color magic</span>
+            <span class="trope">Dystopian</span>
+          </div>
+
           <p class="body-text">
-            Lira sees threads. The colored bonds between paired people light up for her like nobody else in the city can manage, and she has been told her whole life to keep that quiet.
+            Lira's thread is gold. Gold isn't supposed to exist.
           </p>
           <p class="body-text">
-            At thirteen she meets Tieran. Their threads tangle on contact. The color the bond turns is not a color the Threadweavers admit exists. White is a problem. White is a flag.
+            She's thirteen the day she gets paired. Tieran is on the other end of her thread, and the second they touch the bond lights up in a color the Threadweavers have spent forty years pretending isn't real. They say their job is to protect pairings. What they actually do is read them, sort them, and end the ones they don't like.
           </p>
           <p class="body-text">
-            The Threadweavers say their job is to protect pairings. What Lira begins to see, once she knows where to look, is that protection is the wrong word. The threads are not being kept safe. They are being read.
+            Gold means love that isn't supposed to happen inside a system built to engineer it. Lira and Tieran were not supposed to happen.
           </p>
 
           <p class="book-detail-pull">
@@ -48,13 +66,16 @@ const amazonUrl = 'https://www.amazon.com/Thread-Gold-Pairing-Caleb-Arlow/dp/B0G
           </p>
 
           <p class="body-text">
-            Thread of Gold is Book One of The Pairing, a 12-book YA fantasy series. It opens the Discovery arc and introduces a magic system, a romance, and a regime that has lasted because nobody has ever been born who could see what Lira sees.
+            Thread of Gold opens the Discovery arc of The Pairing, a 12-book YA fantasy romance series. For readers of <em>Matched</em>, <em>Delirium</em>, <em>Red Queen</em>, and <em>Powerless</em>.
           </p>
 
           <div class="book-detail-actions">
-            <a class="btn btn-primary" href={amazonUrl} target="_blank" rel="noopener">Buy on Amazon</a>
-            <a class="btn btn-ghost" href="/books/thread-of-silver">Continue to Book Two →</a>
+            <a class="btn btn-primary" href={amazonUrl} target="_blank" rel="noopener">Read on Amazon · Free in KU</a>
+            <a class="btn btn-ghost" href={sampleUrl} target="_blank" rel="noopener">Read a sample</a>
           </div>
+          <p style="margin-top: var(--s-3); font-size: 0.85rem; color: var(--fg-muted);">
+            Or <a href="/books/thread-of-silver" style="color: var(--thread-gold);">continue to Book Two →</a>
+          </p>
         </div>
       </div>
     </div>
@@ -69,3 +90,23 @@ const amazonUrl = 'https://www.amazon.com/Thread-Gold-Pairing-Caleb-Arlow/dp/B0G
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .trope-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    margin: 0 0 var(--s-5);
+  }
+  .trope {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--paper-100);
+    background: rgba(201, 168, 97, 0.10);
+    border: 1px solid rgba(201, 168, 97, 0.30);
+    padding: 0.4rem 0.7rem;
+  }
+</style>

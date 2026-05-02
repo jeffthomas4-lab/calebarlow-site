@@ -1,0 +1,49 @@
+---
+/**
+ * BookSchema. Emits JSON-LD Book schema for Google rich results.
+ * Drop into each book detail page after the cover/content.
+ */
+export interface Props {
+  name: string;
+  bookNumber: number;
+  cover: string;
+  isbn?: string;
+  url: string;
+  amazonUrl: string;
+  description: string;
+}
+const { name, bookNumber, cover, isbn, url, amazonUrl, description } = Astro.props;
+
+const SITE = 'https://calebarlow.com';
+const seriesUrl = `${SITE}/the-pairing`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name,
+  author: {
+    '@type': 'Person',
+    name: 'Caleb Arlow',
+    url: SITE,
+  },
+  inLanguage: 'en',
+  bookFormat: 'https://schema.org/EBook',
+  url: SITE + url,
+  image: SITE + cover,
+  description,
+  isPartOf: {
+    '@type': 'BookSeries',
+    name: 'The Pairing',
+    url: seriesUrl,
+  },
+  position: bookNumber,
+  ...(isbn ? { isbn } : {}),
+  offers: {
+    '@type': 'Offer',
+    url: amazonUrl,
+    availability: 'https://schema.org/InStock',
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

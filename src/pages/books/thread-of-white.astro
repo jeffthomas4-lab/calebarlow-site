@@ -1,15 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
+import BookSchema from '../../components/BookSchema.astro';
 
 const amazonUrl = 'https://www.amazon.com/dp/B0GZ93ZSM4';
+const sampleUrl = 'https://www.amazon.com/dp/B0GZ93ZSM4#reader_B0GZ93ZSM4';
 ---
 
 <BaseLayout
   title="Thread of White · Book Three of The Pairing"
-  description="Lira is a prisoner, and her thread is older than the system that built her cell. Book Three of The Pairing by Caleb Arlow."
+  description="Lira is a prisoner, and her thread is older than the system that built her cell. Book Three of The Pairing by Caleb Arlow. Free with Kindle Unlimited."
   ogImage="/covers/thread-of-white.png"
 >
+  <BookSchema
+    name="Thread of White"
+    bookNumber={3}
+    cover="/covers/thread-of-white.png"
+    url="/books/thread-of-white"
+    amazonUrl={amazonUrl}
+    description="Lira is a prisoner, and her thread is older than the system that built her cell. Book Three of The Pairing, closing the Discovery arc."
+  />
   <section class="section" style="padding-top: var(--s-9);">
     <div class="wrap">
       <p style="margin-bottom: var(--s-5);">
@@ -22,25 +32,33 @@ const amazonUrl = 'https://www.amazon.com/dp/B0GZ93ZSM4';
         </div>
 
         <div>
-          <p class="t-eyebrow white">Book Three · Discovery arc · The Pairing</p>
+          <p class="t-eyebrow white">Book Three · Discovery arc · Free in KU</p>
           <h1 class="book-detail-title">
             Thread of <span class="em-italic" style="color: var(--thread-white-2);">White.</span>
           </h1>
           <div class="book-detail-meta">
-            <span>YA Fantasy</span><span class="dot">·</span>
+            <span>YA Fantasy Romance</span><span class="dot">·</span>
             <span>~199K words</span><span class="dot">·</span>
             <span>43 chapters</span><span class="dot">·</span>
             <span>Ages 14+</span>
+          </div>
+
+          <div class="trope-row">
+            <span class="trope">Chosen one</span>
+            <span class="trope">Rescue arc</span>
+            <span class="trope">High stakes romance</span>
+            <span class="trope">First kiss reunion</span>
+            <span class="trope">Series turning point</span>
           </div>
 
           <p class="body-text">
             Lira is a prisoner of the Threadweavers, and the thread they want is older than the institution holding her. The legend they pretend they don't believe in is sitting in a cell, breathing.
           </p>
           <p class="body-text">
-            Tieran is leading the rescue. The Untied are with him. So are people he is not sure he can trust. The system is louder now and the system is also weaker than it has ever been, and both of those things are true at the same time.
+            Tieran is leading the rescue. The Untied are with him. So are people he isn't sure he can trust. The system is louder than it has ever been and weaker than it has ever been, and both are true at the same time.
           </p>
           <p class="body-text">
-            The choice waiting at the end of this book is the one the entire series has been building toward. Lira can keep her bond and the system. Or she can break the bond and break the system. There is no version where she keeps both.
+            The choice waiting at the end of this book is the one the entire Discovery arc has been building to. Lira can keep her bond and the system that wants her dead. Or she can break the bond and break the system. There is no version where she keeps both.
           </p>
 
           <p class="book-detail-pull">
@@ -48,13 +66,16 @@ const amazonUrl = 'https://www.amazon.com/dp/B0GZ93ZSM4';
           </p>
 
           <p class="body-text">
-            Thread of White closes the Discovery arc of The Pairing and sets up the Rebellion arc that follows.
+            Thread of White closes the Discovery arc and sets up the Rebellion arc that follows. If you've been waiting for the slow burn to finally catch, this is the book.
           </p>
 
           <div class="book-detail-actions">
-            <a class="btn btn-primary" href={amazonUrl} target="_blank" rel="noopener">Buy on Amazon</a>
-            <a class="btn btn-ghost" href="/the-pairing">Inside the world</a>
+            <a class="btn btn-primary" href={amazonUrl} target="_blank" rel="noopener">Read on Amazon · Free in KU</a>
+            <a class="btn btn-ghost" href={sampleUrl} target="_blank" rel="noopener">Read a sample</a>
           </div>
+          <p style="margin-top: var(--s-3); font-size: 0.85rem; color: var(--fg-muted);">
+            New here? <a href="/books/thread-of-gold" style="color: var(--thread-gold);">← Start with Book One</a>
+          </p>
         </div>
       </div>
     </div>
@@ -64,8 +85,28 @@ const amazonUrl = 'https://www.amazon.com/dp/B0GZ93ZSM4';
     <div class="wrap">
       <EmailSignup
         headline="Book Four opens the Rebellion arc."
-        sub="Get the cover, title, and release date in the newsletter before anyone else."
+        sub="Cover, title, and release date drop in the newsletter before anyone else gets them."
       />
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .trope-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    margin: 0 0 var(--s-5);
+  }
+  .trope {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--paper-100);
+    background: rgba(242, 238, 230, 0.08);
+    border: 1px solid rgba(242, 238, 230, 0.28);
+    padding: 0.4rem 0.7rem;
+  }
+</style>
