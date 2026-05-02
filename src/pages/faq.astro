@@ -3,11 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 ---
 
-<BaseLayout title="FAQ · The Pairing · Caleb Arlow">
+<BaseLayout title="FAQ &middot; The Pairing &middot; Caleb Arlow">
   <PageHero eyebrow="Reader questions">
     <Fragment slot="title">FAQ.</Fragment>
     <Fragment slot="lead">
-      Common questions about The Pairing, the romance, the spice, and the release schedule.
+      Common questions about The Pairing: the romance, the age range, the spice level, and the release schedule.
     </Fragment>
   </PageHero>
 
@@ -17,20 +17,16 @@ import PageHero from '../components/PageHero.astro';
         <details class="faq-item">
           <summary>What age is The Pairing for?</summary>
           <div class="faq-body">
-            <p>Books 1-3 are written for ages 14+ (upper YA). The protagonists are 13-14 in those books, so the romance is age-appropriate: holding hands, kisses, emotional intimacy, no explicit content.</p>
-            <p>Books 4-6 (Rebellion arc) are 16+. The characters are 15-17 and the romance escalates with them.</p>
-            <p>Books 7-9 (Transformation arc) are 18+ / New Adult. Characters are adults, the romance is married and explicit, and the themes are heavier.</p>
-            <p>Books 10-12 return to YA (15+) with a new generation.</p>
+            <p>All twelve books are written for ages 14+ (upper YA). The protagonists age across the series (13 in Book One, late teens by the end of the Transformation arc, then a new pair 13-15 in the Legacy arc), but the writing stays YA throughout.</p>
+            <p>If you give YA fantasy romance to a 14-year-old reader, you can give them the entire series.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary>Is it spicy?</summary>
           <div class="faq-body">
-            <p>Discovery arc (Books 1-3): no. Slow burn, kisses, longing, fade-to-black at most.</p>
-            <p>Rebellion arc (Books 4-6): yes, gradually. First sexual content fades in around Book 4, more explicit by Book 6.</p>
-            <p>Transformation arc (Books 7-9): adult intimacy, married sex, pregnancy, postpartum. Open-door scenes.</p>
-            <p>Legacy arc (Books 10-12): back to YA, slow burn, age-appropriate.</p>
+            <p>No. The Pairing is a slow burn from Book One to Book Twelve. Kisses, longing, secret messages through threads, emotional intimacy, fade-to-black at the furthest. The romance is the engine of the series. It just doesn't get explicit.</p>
+            <p>This is for the YA reader who wants the bond without the bedroom door.</p>
           </div>
         </details>
 
@@ -52,7 +48,7 @@ import PageHero from '../components/PageHero.astro';
         <details class="faq-item">
           <summary>What are the tropes?</summary>
           <div class="faq-body">
-            <p>Fated bond. Slow burn. Forbidden romance. Color-coded magic system. Found family. Government-controlled love. Forced separation. Surveillance. Resistance. Eventual marriage and family. Generational legacy.</p>
+            <p>Fated bond. Slow burn. Forbidden romance. Color-coded magic system. Found family. Government-controlled love. Forced separation. Surveillance. Resistance. Generational legacy.</p>
             <p>If you've loved <em>Matched</em>, <em>Delirium</em>, <em>Red Queen</em>, or <em>Powerless</em>, the DNA is here.</p>
           </div>
         </details>
@@ -60,8 +56,8 @@ import PageHero from '../components/PageHero.astro';
         <details class="faq-item">
           <summary>Are there content warnings?</summary>
           <div class="faq-body">
-            <p>Yes. The series includes: state surveillance and authoritarian control, forced separation of romantic partners, on-page death of family members (later arcs), grief, the loss of bodily autonomy as a central theme, and (in later arcs) the long psychological aftermath of trauma.</p>
-            <p>The romance itself is consensual throughout. The system the romance exists inside is the antagonist.</p>
+            <p>Yes. The series includes: state surveillance and authoritarian control, forced separation of romantic partners, on-page death of family members (later arcs), grief, the loss of bodily autonomy as a central theme, and the long aftermath of trauma.</p>
+            <p>The romance itself is consensual and age-appropriate throughout. The system the romance exists inside is the antagonist.</p>
           </div>
         </details>
 
@@ -131,7 +127,7 @@ import PageHero from '../components/PageHero.astro';
     line-height: 1;
   }
   .faq-item[open] summary::after {
-    content: '−';
+    content: '-';
   }
   .faq-body {
     padding: 0 0 var(--s-6) 0;
