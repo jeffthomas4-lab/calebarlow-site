@@ -1,16 +1,7 @@
 ---
 /**
  * EmailSignup. ConvertKit (Kit) signup form.
- *
- * SETUP:
- *   1. In your ConvertKit/Kit account, create a form. Get the embed code.
- *      It will include `data-uid="XXXXXXXXXX"` and an action URL like
- *      `https://app.kit.com/forms/NNNNNNN/subscriptions`.
- *   2. Replace KIT_FORM_ACTION and KIT_DATA_UID below.
- *   3. That's it. The styles match the site; no Kit chrome shows.
- *
- * Until those are set, the form posts to a placeholder and won't capture
- * subscribers. It still LOOKS correct in dev so you can review the design.
+ * Wired to form 9393474 (uid d9521163e3).
  */
 
 export interface Props {
@@ -27,7 +18,6 @@ const {
   fineprint = 'No spam. Unsubscribe anytime.',
 } = Astro.props;
 
-// Kit form: "Join the Newsletter" (form ID 9393474, uid d9521163e3)
 const KIT_FORM_ACTION = 'https://app.kit.com/forms/9393474/subscriptions';
 const KIT_FORM_ID     = '9393474';
 const KIT_DATA_UID    = 'd9521163e3';
