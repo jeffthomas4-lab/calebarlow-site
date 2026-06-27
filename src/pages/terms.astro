@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const updated = '2026-06-27';
+---
+
+<BaseLayout title="Terms · Caleb Arlow">
+  <PageHero eyebrow="Terms">
+    <Fragment slot="title">Terms of use.</Fragment>
+    <Fragment slot="lead">
+      Plain language. What the site is, what you can do here, and what we are not responsible for.
+    </Fragment>
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap-text">
+      <p class="body-text"><strong>Last updated:</strong> {updated}</p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">What this site is</h2>
+      <p class="body-text">
+        Calebarlow.com publishes information about The Pairing series and related fiction by Caleb Arlow. The content is creative and informational. Nothing here is legal, financial, or professional advice.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Acceptable use</h2>
+      <p class="body-text">
+        You may read, share links, and quote brief excerpts for review or commentary. You may not reproduce substantial portions of the text, copy cover images for commercial use, or scrape the site with automated tools.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Affiliate links</h2>
+      <p class="body-text">
+        Amazon links on this site include an affiliate tag. Buying through one costs you nothing extra and may earn a small commission. We only link books we actually published.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Newsletter</h2>
+      <p class="body-text">
+        Signing up puts your email address in our Kit account. We use it to send book announcements and related updates. You can unsubscribe at any time using the link in any email, and your address is removed immediately.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">No warranties</h2>
+      <p class="body-text">
+        The site is provided as-is. We keep information accurate and post corrections when we get something wrong. We make no warranty that any page is complete, current, or fit for your situation.
+      </p>
+      <p class="body-text">
+        To the fullest extent the law allows, Caleb Arlow and Field &amp; Forge Ventures are not liable for damages arising from your use of the site or anything you buy through links on it. Some jurisdictions do not allow these limits.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Governing law</h2>
+      <p class="body-text">
+        These terms are governed by the laws of the State of Washington, USA. We may update them. The date at the top tells you when we last did.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Contact</h2>
+      <p class="body-text">
+        Calebarlow.com is published by Field &amp; Forge Ventures under the Caleb Arlow imprint.
+      </p>
+      <p class="body-text">
+        Questions: <a href="mailto:authorcalebarlow@gmail.com" style="color: var(--thread-gold);">authorcalebarlow@gmail.com</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

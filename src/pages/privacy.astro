@@ -2,14 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 
-const updated = '2026-05-02';
+const updated = '2026-06-27';
 ---
 
 <BaseLayout title="Privacy · Caleb Arlow">
   <PageHero eyebrow="Privacy">
     <Fragment slot="title">Privacy.</Fragment>
     <Fragment slot="lead">
-      The short version: this site collects an email address if you give it, an analytics ping if you visit, and nothing else.
+      The short version: this site collects an email address if you give it, logs a page view when you visit, and nothing else.
     </Fragment>
   </PageHero>
 
@@ -19,22 +19,38 @@ const updated = '2026-05-02';
 
       <h2 class="t-h3" style="margin-top: var(--s-6);">Email</h2>
       <p class="body-text">
-        If you sign up for the newsletter, your email is stored with our email provider (ConvertKit/Kit). It is used to send book release announcements and related updates. You can unsubscribe at any time using the link in any email.
+        If you sign up for the newsletter, your email address goes to Kit (formerly ConvertKit). Kit stores it and we use it to send book announcements and related updates. Unsubscribe at any time using the link in any email. Kit's privacy policy is at kit.com.
+      </p>
+      <p class="body-text">
+        We do not sell or share your email. We do not run advertising trackers.
       </p>
 
-      <h2 class="t-h3" style="margin-top: var(--s-6);">Analytics</h2>
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Traffic data</h2>
       <p class="body-text">
-        This site uses Google Analytics 4 with anonymized IP addresses. It records anonymous traffic data so we know which pages people read. It does not track you across other sites.
+        This site is hosted on Cloudflare Pages. Cloudflare logs request data at the edge (IP address, URL, timestamp, browser type) as part of normal hosting. We do not have access to individual visitor logs. No behavioral analytics, cookies, or tracking pixels are active on this site.
       </p>
 
       <h2 class="t-h3" style="margin-top: var(--s-6);">Affiliate links</h2>
       <p class="body-text">
-        Amazon links on this site may include an affiliate tag. If you buy a book through one, the publisher receives a small commission at no extra cost to you.
+        Amazon links on this site include an affiliate tag. Clicking one takes you to Amazon's site, which has its own privacy practices. No data about your click is shared with us beyond what Amazon's standard affiliate reporting shows (a count of purchases, no personal details).
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Your rights</h2>
+      <p class="body-text">
+        To have your newsletter email removed, unsubscribe via the link in any email. To ask what we hold about you or request deletion, email <a href="mailto:authorcalebarlow@gmail.com" style="color: var(--thread-gold);">authorcalebarlow@gmail.com</a>. We will respond within 30 days. We do not sell personal information.
+      </p>
+
+      <h2 class="t-h3" style="margin-top: var(--s-6);">Children</h2>
+      <p class="body-text">
+        This site publishes YA fiction for teen and adult readers. We do not knowingly collect information from children under 13. If you believe a child under 13 has submitted their email, contact us and we will remove it.
       </p>
 
       <h2 class="t-h3" style="margin-top: var(--s-6);">Contact</h2>
       <p class="body-text">
-        Questions about privacy or data: <a href="mailto:authorcalebarlow@gmail.com" style="color: var(--thread-gold);">authorcalebarlow@gmail.com</a>.
+        Calebarlow.com is published by Field &amp; Forge Ventures under the Caleb Arlow imprint.
+      </p>
+      <p class="body-text">
+        Questions: <a href="mailto:authorcalebarlow@gmail.com" style="color: var(--thread-gold);">authorcalebarlow@gmail.com</a>.
       </p>
     </div>
   </section>

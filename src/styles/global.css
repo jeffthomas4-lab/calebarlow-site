@@ -1,3 +1,19 @@
+/* Self-hosted fonts — loaded from node_modules via Astro build */
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/400-italic.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/500-italic.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/cormorant-garamond/600-italic.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/source-serif-4/400.css';
+@import '@fontsource/source-serif-4/400-italic.css';
+@import '@fontsource/source-serif-4/500.css';
+@import '@fontsource/source-serif-4/600.css';
+
 /* =============================================================
    CALEB ARLOW, SHARED BASE CSS (design-system v1.0)
    Dark cinematic base. Gold/silver/white thread accents.
@@ -74,6 +90,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+*:focus-visible { outline: 2px solid var(--thread-gold); outline-offset: 2px; }
 
 body {
   margin: 0;

@@ -19,13 +19,6 @@ const {
 
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://calebarlow.com').toString();
-
-// Google Analytics 4. Loaded only in production with a real ID set.
-// Replace the placeholder with your GA4 Measurement ID (looks like "G-XXXXXXXXXX")
-// when you're ready to track. Leave as-is and analytics simply won't load.
-const GA_MEASUREMENT_ID = 'G-1VKF6PJQJS';
-const isProd = import.meta.env.PROD;
-const analyticsActive = isProd && !!GA_MEASUREMENT_ID;
 ---
 
 <!doctype html>
@@ -51,37 +44,6 @@ const analyticsActive = isProd && !!GA_MEASUREMENT_ID;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap"
-      rel="stylesheet"
-    />
-
-    {analyticsActive && (
-      <>
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
-        <script is:inline define:vars={{ id: GA_MEASUREMENT_ID }}>{`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', id, { anonymize_ip: true });
-          // Track Amazon click-throughs as a named event for conversion tracking.
-          document.addEventListener('click', function (e) {
-            var a = e.target && e.target.closest && e.target.closest('a[href*="amazon."]');
-            if (!a) return;
-            try {
-              gtag('event', 'click_amazon', {
-                link_url: a.href,
-                link_text: (a.innerText || '').trim().slice(0, 80),
-                page_path: location.pathname
-              });
-            } catch (err) { /* swallow */ }
-          }, { capture: true });
-        `}</script>
-      </>
-    )}
   </head>
   <body class={bodyClass}>
     <Nav currentPath={currentPath} />
